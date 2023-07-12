@@ -3,7 +3,7 @@ import React from 'react';
 export default props => {
 const min = props.min;
 const max = props.max;
-const aleatorio = parseInt(Math.random() * (mix - min) - max )
+const aleatorio = parseInt(Math.random() * (min - min) - max )
 
 
   return (  
