@@ -6,7 +6,11 @@ import Fragmento from "./componentes/basicos/Fragmento";
 import Card from './componentes/layout/Card';
 import './App.css';
 import Familia from './componentes/basicos/Familia';
-import FamiliaMembro from './componentes/basicos/FamiliaMembro'
+import FamiliaMembro from './componentes/basicos/FamiliaMembro';
+import ListaAlunos from './componentes/repeticao/ListaAlunos';
+import ListaProdutos from './componentes/repeticao/ListaProdutos'
+
+
 
 
 
@@ -15,14 +19,28 @@ export default () => (
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className="Cards">
-            <Card titulo="  #05 componente com filhos" color="#ca4b9b">
-                 <Familia>
-                 sobrenome="Silva"
-                     <FamiliaMembro nome="Pedro" />
-                    <FamiliaMembro nome="Ana"/>
-                    <FamiliaMembro nome="Gustavo" />
-                 </Familia>
+        
+        <Card titulo=" #07 Desafio Produto" color="#A324">
+                <ListaProdutos>
+                    
+                </ListaProdutos>
 
+            </Card>
+
+         <Card titulo=" #06 Repetição" color="#4324">
+                <ListaAlunos>
+
+                </ListaAlunos>
+
+            </Card>
+
+            <Card titulo="  #05 componente com filhos" color="#ca4b9b">
+            <Familia>
+                     <FamiliaMembro nome="Pedro" sobrenome = "Ferreira" />
+                    <FamiliaMembro nome="Ana"  sobrenome = "Ferreira"  />
+                    <FamiliaMembro nome="Gustavo" sobrenome = "Ferreira" />
+                    
+            </Familia>
             </Card>
 
             <Card titulo="  #04 Desafio Aleatório" color="#090">

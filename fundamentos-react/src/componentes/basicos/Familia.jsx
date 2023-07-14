@@ -1,14 +1,11 @@
 import React from 'react';
-import FamilaMembro from './FamilaMembro';
+import FamiliaMembro from './FamiliaMembro';
 
 
 export default props => {
     return (
         <div>
-        
-                    <FamiliaMembro nome="Pedro" sobrenome = 'silva' />
-                    <FamiliaMembro nome="Ana" sobrenome = 'silva'/>
-                    <FamiliaMembro nome="Gustavo" sobrenome = 'silva' />
+        {props.children}     
         
         
         </div>
