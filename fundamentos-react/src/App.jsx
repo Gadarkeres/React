@@ -12,6 +12,7 @@ import ListaProdutos from './componentes/repeticao/ListaProdutos'
 import ParOuImpar from './componentes/condicional/ParOuImpar';
 import DiretaPai from './componentes/comunicacao/DiretaPai';
 import Input from './componentes/formulario/Input'
+import Contador from './componentes/contador/Contador'
 
 
 
@@ -21,6 +22,11 @@ export default () => (
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className="Cards">
+         
+        <Card titulo=" #12 Contador"  color="#8A2BE2">
+                <Contador/>
+
+            </Card>
 
         <Card titulo=" #11 Componente controlado"  color="#AD3A">
                 <Input/>
@@ -31,9 +37,9 @@ export default () => (
                 <DiretaPai/>
 
             </Card>
-     
-        <Card titulo=" #09 Comunicação Direta"  color="#F23A">
+     <Card titulo=" #09 Comunicação Direta"  color="#F23A">
                 <DiretaPai/>
+     
 
             </Card>
 
