@@ -9,7 +9,9 @@ import Familia from './componentes/basicos/Familia';
 import FamiliaMembro from './componentes/basicos/FamiliaMembro';
 import ListaAlunos from './componentes/repeticao/ListaAlunos';
 import ListaProdutos from './componentes/repeticao/ListaProdutos'
-
+import ParOuImpar from './componentes/condicional/ParOuImpar';
+import DiretaPai from './componentes/comunicacao/DiretaPai';
+import Input from './componentes/formulario/Input'
 
 
 
@@ -19,6 +21,26 @@ export default () => (
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className="Cards">
+
+        <Card titulo=" #11 Componente controlado"  color="#AD3A">
+                <Input/>
+
+            </Card>
+
+        <Card titulo=" #10 Comunicação Indireta"  color="#F23A">
+                <DiretaPai/>
+
+            </Card>
+     
+        <Card titulo=" #09 Comunicação Direta"  color="#F23A">
+                <DiretaPai/>
+
+            </Card>
+
+        <Card titulo=" #08 Renderização condicional"  color="#F23A">
+                <ParOuImpar numero = {20}/>
+
+            </Card>
         
         <Card titulo=" #07 Desafio Produto" color="#A324">
                 <ListaProdutos>
