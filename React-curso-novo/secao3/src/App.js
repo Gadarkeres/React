@@ -1,4 +1,6 @@
 import Img2 from './assets/img2.jpg'
+import ListRender from './components/ListRender';
+
 
 //Imports de css 
 import './App.css';
@@ -15,6 +17,7 @@ function App() {
      <div>
      <img src={Img2} alt="Paisagem do mar" />
      </div>
+    <ListRender/>
     </div>
   );
 }
