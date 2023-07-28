@@ -1,5 +1,6 @@
 
 import './App.css';
+import Car from './components/Car';
 
 function App() {
   const myCars = [
@@ -12,7 +13,7 @@ function App() {
       <h1>Showroom de carros</h1>
       <div className="car-container" >
         {myCars.map((car) =>
-        <Car nome={car.name} km={km.car} cor={color.car}/>
+        <Car nome={car.name} km={car.km} cor={car.color}/>
         )}
       </div>
     </div>
