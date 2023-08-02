@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+//css
 import './App.css';
 
+//React
+import { useCallback, useEffect, useState } from 'react';
+
+//data
+import {wordsList} from "./data/wordsList"
+
+//Componentes
+import Telainicial from './components/Telainicial';
+import Game from './components/Game';
+import End from './components/End';
+
+
+
+
+
+const stages = [
+  {id: 1, name:"começo"},
+  {id: 2, name:"Game"},
+  {id: 1, name:"End"},
+
+]
+
 function App() {
+  // começando estagio no array de indice 0 da variavel ''stages''
+  const [gameStage, setGameStage] = useState (stages[0].name);
+  
+  // pegandos os dados da variavel wordslist e passar para ''words''
+  const[Words] = useState(wordsList)
+  console.log(Words)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       {/* se o estagio do jogo for ''começo'' > tela inicial */}
+    {gameStage === 'começo' &&  <Telainicial/> }
+    {gameStage === 'Game' &&  <Game/> }
+    {gameStage === 'End' &&  <End/> }
+    
     </div>
   );
 }
