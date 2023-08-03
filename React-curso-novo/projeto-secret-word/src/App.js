@@ -31,17 +31,27 @@ function App() {
   
   // pegandos os dados da variavel wordslist e passar para ''words''
   const[Words] = useState(wordsList)
-  
+   //começa o jogo de palavras
    const startgame = () =>{
     setGameStage(stages[1].name)
+   }
+
+   //processo da letra do input
+   const verifyLetter = () =>{
+    setGameStage(stages[2].name)
+   }
+
+   // restaura o jogo
+   const retry = () => {
+    setGameStage(stages[0].name)
    }
 
   return (
     <div className="App">
        {/* se o estagio do jogo for ''começo'' > tela inicial */}
     {gameStage === 'começo' &&  <Telainicial startgame={startgame} /> }
-    {gameStage === 'Game' &&  <Game/> }
-    {gameStage === 'End' &&  <End/> }
+    {gameStage === 'Game' &&  <Game verifyLetter={verifyLetter}/> }
+    {gameStage === 'End' &&  <End retry={retry}/>}
     
     </div>
   );
