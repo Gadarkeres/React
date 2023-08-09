@@ -1,12 +1,12 @@
 import React from 'react'
-import { useContext } from "react"
-import { ContadorContext } from "../context/ContadorContext"
+import { useContadorContext } from '../hooks/useContadorContext'
+
 
 const Product = () => {
-  const {contador} = useContext(ContadorContext)
+  const {contador} = useContadorContext();
   return (
     <div> <p>
-    <h2>About</h2>
+    <h2>Produtos</h2>
     <p>valor do contador: {contador}</p>
     </p></div>
   )

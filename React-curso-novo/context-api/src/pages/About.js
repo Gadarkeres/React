@@ -1,12 +1,14 @@
-import { useContext } from "react"
-import { ContadorContext } from "../context/ContadorContext"
+import { useContadorContext } from "../hooks/useContadorContext";
+import { useCordotituloContext } from "../hooks/useCordotituloContext";
+
 const About = () => {
 
-  const {contador} = useContext(ContadorContext)
+  const {contador} = useContadorContext();
+  const {color} = useCordotituloContext()
   return (
     <div>
       <p>
-      <h2>About</h2>
+      <h2 style={{color: color}}>About</h2>
       <p>valor do contador: {contador}</p>
       </p>
     </div>
